@@ -1,4 +1,4 @@
-//4 Sum | Find Quads that add up to a target value
+//4 Sum ->| Find Quads that add up to a target value
 //brute force approach
 //Time Complexity: O(N4), where N = size of the array.
 //Reason: Here, we are mainly using 4 nested loops. But we not considering the time complexity of sorting as we are just sorting 4 elements every time.
@@ -9,9 +9,7 @@
 import java.util.*;
 public class fourSum {
      public static List<List<Integer>> four(int arr[],int tar){
-        
-        Set<List<Integer>>hash=new HashSet<>();  // use this type ..when hashset use krna hoga tb..kyuki list ko add krna hai n..JB LIST KO ADD KRNA HOGA TB ISI TYPE KA HASHSET BNANA..NOT THE HashSet<Integer> hash= new HashSet<>();  is vale se to element ko add krne ke liye hota h..list ke liye nae
-        
+        Set<List<Integer>>hash=new HashSet<>();  // use this type ..when hashset use krna hoga tb..kyuki list ko add krna hai n..JB LIST KO ADD KRNA HOGA TB ISI TYPE KA HASHSET BNANA..NOT THE HashSet<Integer> hash= new HashSet<>();  is vale se to element ko add krne ke liye hota h..list ke liye nae    
         int n=arr.length;
        for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++){
@@ -47,7 +45,6 @@ public class fourSum {
 //Better Approach (Using 3 loops and set data structure): 
 //Time Complexity: O(N3*log(M)), where N = size of the array, M = no. of elements in the set.
 //Reason: Here, we are mainly using 3 nested loops, and inside the loops there are some operations on the set data structure which take log(M) time complexity.
-
 //Space Complexity: O(2 * no. of the quadruplets)+O(N)
 //Reason: we are using a set data structure and a list to store the quads. This results in the first term. And the second space is taken by the set data structure we are using to store the array elements. At most, the set can contain approximately all the array elements and so the space complexity is O(N).
 
@@ -89,6 +86,8 @@ public class fourSum {
      }
 }
    */
+
+   
 //OPTIMAL APPROACH
 import java.util.*;
 public class fourSum {
