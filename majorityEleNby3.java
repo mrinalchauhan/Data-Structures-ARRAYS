@@ -55,10 +55,6 @@ public class majorityEleNby3 {
 }  
     */
 
-// BETTER APPROACH
-//HASHMAP THA ...NOT DONE
-
-
 //OPTIMAL APPROACH
 //T.C=O(N)+O(N)
 //S.C=O(1)
@@ -153,14 +149,35 @@ public class majorityEleNby3 {
     public static void main(String args[]){
         int arr[]={1,2,1,4,1,4,1,4,1,4,4,4,4,1};
         int n=arr.length;
-       List<Integer> ans=majority(arr, n);
-    System.out.println("Element occ more than n/3 times is ");
-       for(int i=0;i<ans.size();i++){
+        List<Integer> ans=majority(arr, n);
+        System.out.println("Element occ more than n/3 times is ");
+        for(int i=0;i<ans.size();i++){
         System.out.print(ans.get(i)+" ,");
         
        }
 
     }
-}            
+}   
+
+//leetcode-> better approach 
+
+// class Solution {
+//     public List<Integer> majorityElement(int[] nums) {
+//      HashMap<Integer,Integer> map=new HashMap();
+//      List<Integer> res=new ArrayList<>();
+//      Arrays.sort(nums);
+//      int n=nums.length;
+//      for(int i=0;i<n;i++){
+//         int val=map.getOrDefault(nums[i],0);
+//         map.put(nums[i],val+1);
+//      }   
+//      for(Map.Entry<Integer, Integer> it : map.entrySet()){
+//         if(it.getValue()>n/3){
+//             res.add(it.getKey());
+//         }
+//      }
+//      return res;
+//     }
+// }
 
 
